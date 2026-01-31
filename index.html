@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <header class="header">
+        <h1>🤖 ML Learning Assistant</h1>
+        <p>Learn machine learning concepts in text, code, audio, or images</p>
+    </header>
+
+    <div class="form">
+        <input 
+            id="topic" 
+            type="text" 
+            placeholder="e.g. Neural Networks, Gradient Descent"
+        >
+
+        <select id="mode">
+            <option value="text">📄 Text explanation</option>
+            <option value="code">💻 Code example</option>
+            <option value="audio">🎧 Audio</option>
+            <option value="image">🖼️ Diagram / Image</option>
+        </select>
+
+        <button onclick="generate()">Generate</button>
+    </div>
+
+    <section class="output-wrapper">
+        <h3>Output</h3>
+        <pre id="output">Your result will appear here...</pre>
+    </section>
+</div>
+
+<script src="/static/js/main.js"></script>
+{% endblock %}
